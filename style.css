@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+#library-container {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(autofit, 200px);
+    justify-self: left;
+}
+
+.book-card {
+    display: grid;
+    border: 1px solid #000000;
+    padding: 15px;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    text-justify: center;
+    font-family: parkinsans;
+    background: linear-gradient(60deg, rgba(128, 0, 128, 0.5), rgba(223, 6, 42, 0.5));
+    border-radius: 12px;
+}
+
+.bookStatus {
+    padding-bottom: 10px;
+}
+
+.removeButton,
+.statusButton {
+    background-color: rgba(255, 255, 255, 0.418);
+    color: black;
+    border-radius: 8px;
+    padding: 5px;
+    border: 2.5px solid white;
+    font-size: 12px;
+    width: 50%;
+}
+
+.buttonCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+    
+
+
+.bg {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: rgba(0, 0, 0, 0.897);
+    display: grid;
+    padding-left: 30px;
+}
+
+.title {
+    color: white;
+    font-family: parkinsans;
+    font-size: 54px;
+    align-self: center;
+    
+}
+
+#sidebar-container {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+}
+
+#form-container {
+    position: absolute;  /* Make the form absolute inside the grid */
+    top: 100%;  /* Position the form directly below the header */
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10%;
+    grid-template-rows: 5fr 1fr;
+    grid-row: 2 / 3;
+    font-family: parkinsans;
+    background: linear-gradient(60deg, rgba(128, 0, 128, 0.5), rgba(223, 6, 42, 0.5));
+    opacity: 0;
+    max-height: 0; 
+    overflow: hidden;
+    transition: opacity 1s ease, max-height 1s ease;
+}
+
+#form-container.show {
+    display: grid;
+    grid-row: 2 / 3;
+    opacity: 1; 
+    max-height: 500px; 
+}
+
+#bookForm {
+    display: grid;
+    visibility: visible;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    font-family: parkinsans;
+    gap: 20px;
+}
+
+button {
+    font-family: parkinsans;
+    font-weight: 520;
+}
+
+.input {
+    display: grid;
+}
+
+.inputBox {
+    padding: 2px;
+}
+
+.inputBox:focus {
+    outline: none;
+    border: 1.5px solid rgba(223, 6, 42, 0.5);
+}
+
+.statusBoxes {
+    text-align: center;
+    justify-items: left;
+    height: 100%;
+    display: grid;
+    grid-template-columns: .4fr 1fr;
+}
+
+#addButton {
+    border-radius: 10px;
+    width: 100%;
+    justify-self: center;
+    border: none;
+}
+
+#closeButton {
+    border-radius: 10px;
+    width: 100%;
+    justify-self: center;
+    margin-top: 5%;
+    border: none;
+}
+
+#newButton {
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    border: 2.5px solid rgb(0, 0, 0);
+    outline: none;
+    background: linear-gradient(60deg, rgb(173, 63, 173), rgb(223, 6, 42));
+    color: rgb(0, 0, 0);
+    font-family: parkinsans;
+    font-weight: 520;
+    font-size: 16px;
+}
+
+#newButton:disabled {
+    background-color: gray; 
+    color: #ccc; 
+    cursor: not-allowed; 
+    border: 2px solid #ccc; 
+}
+
+#newButton:disabled:hover {
+    background-color: gray; 
+    color: #ccc; 
+    cursor: not-allowed; 
+    border: 2px solid #ccc; 
+}
+
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.897);
+    padding: 10%;
+    grid-row: 1 / 2;
+    display: grid;
+    place-items: center;
+}
+
+
+
+button#addButton:hover,
+button#closeButton:hover,
+.removeButton:hover,
+.statusButton:hover {
+    box-sizing: border-box;
+    border: solid 2.5px black;
+}
+
+button#newButton:hover {
+    border: solid 2.5px white;
+    color: white;
+}
+
+.bookImg {
+    position: absolute;
+    top: 74%;
+    right: 85%;
+    width: 10%;
+
+}

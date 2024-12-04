@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <title>Library</title>
+</head>
+<body>
+    <div class="container">
+            <div id="sidebar-container">
+                <div class="header">
+                    <button id="newButton">New Book</button>
+                </div>
+                <div id="form-container">
+                    <form id="bookForm" action="" method="POST">
+                        <div class="input">
+                            <label for="title">Title:</label>
+                            <input class="inputBox" type="text" id="title" name="title" required>
+                        </div>
+
+                        <div class="input">
+                            <label for="author">Author:</label>
+                            <input class="inputBox" type="text" id="author" name="author" required>
+                        </div>
+                        <div class="input">
+                            <label for="pages">Number of Pages:</label>
+                            <input class="inputBox" type="number" id="pages" name="pages" required>
+                        </div>
+
+                        <div class="statusBoxes">
+                        
+                                <label for="read">Read</label>
+                                <input type="radio" id="read" name="status" value="Read">
+                            
+                            
+                                <label for="unread">Unread</label>
+                                <input type="radio" id="unread" name="status" value="Unread">
+                            
+                        </div>
+
+                        <button id="addButton" type="submit">Add Book to Library</button>
+                    </form>
+                    <button id="closeButton">Close</button>
+                </div>
+            </div>
+            <div class="bg">
+                <div class="title">My Library</div>
+            </div>
+            <div id="library-container"></div>
+            <img class="bookImg" src="library.svg" alt="Library Icon">
+        </div>
+
+   <script src="script.js"></script>
+</body> 
+</html>
